@@ -1,0 +1,93 @@
+---
+title: "Graficando derivadas"
+Autor: "Bautista Leon Carlos Augusto, Carbajal Palacios Erick, Esteva Santos Izanami"
+date: "16/12/2020"
+output: html_document
+---
+
+## Graficando Derivadas
+
+## 1.- Activamos las librerias que vamos a usar
+
+```{r}
+library(Deriv)
+```
+
+## 2.- Escogemos las funciones a derivar
+
+I. f(x)=x^2-2*x^2+x
+II. g(x)=25-x^3-2
+III. h(x)=x^2+28
+
+Las derivamos usando "Deriv" y le ponemos nombre a la derivada obtenida.
+
+```{r}
+f<-function(x) x^2-2*x^2+x
+fprima<-Deriv(f, "x")
+fprima
+
+```
+
+```{r}
+g<-function(x) 25-x^3-2
+gprima<-Deriv(g, "x")
+gprima
+
+```
+
+```{r}
+h<- function(x) x^2+28
+hprima<-Deriv(h, "x")
+hprima
+
+```
+
+## 3.- Definimos los valores que puede tomar "x"
+
+```{r}
+x<-seq(-100,100,0.5)
+x
+
+```
+
+## 4.- Graficamos las funciones con los valores de x
+
+```{r}
+fx<-f(x)
+plot(fx)
+
+```
+
+```{r}
+gx<-g(x)
+plot(gx)
+
+```
+
+```{r}
+hx<-h(x)
+plot(hx)
+
+```
+
+## 5.- Graficamos las derivadas
+
+```{r}
+fprimax<-fprima(x)
+plot(fprimax)
+
+```
+
+```{r}
+gprimax<-gprima(x)
+plot(gprimax)
+
+```
+
+```{r}
+hprimax<-hprima(x)
+plot(hprimax)
+
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VWIbAWdyz1w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
